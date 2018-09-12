@@ -5,7 +5,7 @@
       โปรไฟล์
     </ion-title>
     <ion-buttons end>
-        <button ion-button icon-only color="royal">
+        <button ion-button icon-only color="royal" (click)="logout()">
           <ion-icon name="log-out"></ion-icon>
         </button>
     </ion-buttons>
@@ -15,5 +15,25 @@
 
 
 <ion-content padding>
+  <ion-item>
+    <ion-label floating>รหัสประจำตัวนักศึกษา</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.idstd"></ion-input>
+  </ion-item>
 
+  <ion-item>
+    <ion-label floating>ชื่อ</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.fname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>นามสกุล</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.lname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>สาขาวิชา</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.depname"></ion-input>
+  </ion-item>
+
+  <button ion-button clear (click)="createProfile()">เพิ่มข้อมูล</button>
 </ion-content>
