@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>
+      สแกนโค๊ด
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only color="royal">
+          <ion-icon name="log-out"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <h2>กรุณาคลิกปุ่ม เพื่อทำการสแกนโค๊ด</h2>
+    <button ion-button block icon-only (click)="scan()">
+      <ion-icon name="camera"></ion-icon>
+    </button>
+    <h2>-----------------------------------</h2>
+    <ion-list>
+      <ion-item>
+        <b>ข้อมูล : </b>{{ data.text }}<br>
+        <b>รูปแบบ : </b>{{ data.format }}<br>
+      </ion-item>
+    </ion-list>
+</ion-content>
