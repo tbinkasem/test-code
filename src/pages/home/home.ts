@@ -31,7 +31,7 @@ export class HomePage {
   }
 
   logout(){
-    console.log("page id is: " + this.navCtrl.getActive().id);
+    console.log("page id : " + this.navCtrl.getActive().id);
     this.testNav = this.app.getRootNavById('n4-1');
     this.navCtrl.setRoot(LoginPage);
   }
